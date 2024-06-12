@@ -1,5 +1,6 @@
 package by.itclass.airplane;
 
+import by.itclass.flight.Flight;
 import by.itclass.passenger.Passenger;
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 public class Airplane {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +22,7 @@ public class Airplane {
     private String model;
     @NonNull
     private int places;
-    @OneToMany(mappedBy = "airplane",fetch = FetchType.EAGER)
-    private List<Passenger> passengers;
+    @OneToMany(mappedBy = "airplane", fetch = FetchType.EAGER)
+    private List<Flight> flights;
 
 }
