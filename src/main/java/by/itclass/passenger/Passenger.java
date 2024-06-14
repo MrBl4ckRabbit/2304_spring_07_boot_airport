@@ -8,6 +8,7 @@ import lombok.*;
 @Entity
 @Table(name = "passenger")
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 @Setter
 @Getter
@@ -20,6 +21,8 @@ public class Passenger {
     @NonNull
     private String place;
     @ManyToOne
+    @NonNull
     private Flight flight;
+
 
 }

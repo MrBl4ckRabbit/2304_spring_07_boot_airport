@@ -42,17 +42,5 @@ public class AirplaneController {
         repository.deleteById(planeId);
         return "redirect:/allPlanes";
     }
-//    @GetMapping
-//    public String getAllAirplanes(Model model) {
-//        var airplanes = repository.findAll();
-//        model.addAttribute("airplanes", airplanes);
-//        return "index";
-//    }
-//
-//    @GetMapping("/view")
-//    public String viewPlane(@RequestParam(name = "plane") int airplaneId, Model model) {
-//        var airplane = repository.findById(airplaneId).get();
-//        model.addAttribute("airplane", airplane);
-//        return "airplane";
-//    }
+
 }

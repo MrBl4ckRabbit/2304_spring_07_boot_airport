@@ -28,5 +28,10 @@ public class Flight {
     @OneToMany(mappedBy = "flight", fetch = FetchType.EAGER)
     private List<Passenger> passengers;
 
-
+    public Flight(int id, @NonNull String number, @NonNull String direction, @NonNull Airplane airplane) {
+        this.id = id;
+        this.number = number;
+        this.direction = direction;
+        this.airplane = airplane;
+    }
 }

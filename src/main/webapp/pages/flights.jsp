@@ -21,6 +21,8 @@
         <td>${flight.airplane.model}</td>
         <td>
           <a href="/viewFlight/${flight.id}">View</a>
+          <a href="/delFlight/${flight.id}">Delete</a>
+          <a href="/updFlight/${flight.id}">Update</a>
 
         </td>
        </tr>
